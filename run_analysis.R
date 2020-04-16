@@ -104,7 +104,6 @@ DT <- cbind(subject,activity, DT)
 ## From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. ##
 ####################################################################################################################################################
 
-# melt data to tall skinny data and cast means. Finally write the tidy data to the working directory as "tidy_data.txt"
-baseData <- melt(DT,(id.vars=c("subject","activity")))
-secondDataSet <- dcast(baseData, subject + activity ~ variable, mean)
-write.table(secondDataSet, "tidy_data.txt", sep = ",", row.names=FALSE)
+secondDataSet <- aggregate( . ~ subject + activity, data = DT, FUN = mean )
+# write out tidy Data
+write.table( secondDataSet, "tidy_data.txt", row.names = FALSE )

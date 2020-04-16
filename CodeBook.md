@@ -4,7 +4,7 @@ For information about how to dowload the data set used in this project go to the
 
 ## Input files
 
-The data set includes the following files:
+The data set in folder 'UCI HAR Dataset' includes the following files:
 
 * 'README.txt'
 * 'features_info.txt': Shows information about the variables used on the feature vector.
@@ -39,3 +39,5 @@ The script created:
 ## Output
 
 The final output is a tidy data set with the average of each variable for each activity and each subject and can be found [here](https://github.com/JPSantistebanQ/Getting-and-Cleaning-Data-Course-Project/blob/master/tidy_data.txt)
+
+`secondDataSet` is the tidy data produced after going through all 5 steps of the course project. It contains 180 observations and 68 variables. Where the first column is the subject id, second column is the activity and the rest are the average of each feature variables.
